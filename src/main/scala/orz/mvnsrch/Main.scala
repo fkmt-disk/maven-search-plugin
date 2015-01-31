@@ -63,7 +63,7 @@ object Main extends Plugin {
         val idx= readLine("enter selection number: ").toInt
         val dsc = list(idx)
         new FileWriter("build.sbt", true).use { w =>
-          w.write(s"""libraryDependencies += "${dsc('group)}" % "${dsc('artifact)}" % "${dsc('version)}"\n""")
+          w.write(s"""\n\nlibraryDependencies += "${dsc('group)}" % "${dsc('artifact)}" % "${dsc('version)}"\n""")
         }
       }
 
